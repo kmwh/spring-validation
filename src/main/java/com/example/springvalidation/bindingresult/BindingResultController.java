@@ -15,7 +15,7 @@ import java.util.List;
 public class BindingResultController {
 
     @PostMapping("/v1/member")
-    public String createMemberV1(@ModelAttribute MemberCreateRequestDto request, Model model) {
+    public String createMemberV1(@ModelAttribute MemberCreateRequestDto request, Model model) { // model은 View에 데이터를 넘기는 데에 사용
         // Model에 저장
         System.out.println("/V1/member API가 호출되었습니다.");
         model.addAttribute("point", request.getPoint());
